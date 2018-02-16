@@ -1,40 +1,470 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="utf-8">
-   <title>{{ page.title }} - {{ site.title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>{{ site.title }}</title>
 
-   <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/style.css" >
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-   <script src="{{ site.path }}/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ site.path }}/css/style.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" >
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css" >
+  <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">{{ site.title }}</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="https://github.com/henrythemes/jekyll-bootstrap-theme">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+  <!-- PRELOADER -->
+	<div class="page-loader">
+    <div class="loader">Loading...</div>
+  </div>
+  <!-- /PRELOADER -->
 
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <div class="content">
-        {{ content }}
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{ site.title }}</a>
       </div>
-    </div><!-- /.container -->
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#bands">Bands</a></li>
+          <li><a href="#camping">Camping</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+
+    <section id="banner" class="banner">
+      <div class="container">
+      <div class="row multi-columns-row">
+        <div class="col">
+          <img src="{{ site.path }}/images/faf-banner.jpg" />
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- BANDS -->
+		<section id="bands" class="module">
+
+        <!-- MODULE DIVIDER -->
+        <a id="hero-divider" class="striped-icon divider inner-scroll" href="#bands">
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <!-- /MODULE DIVIDER -->
+  
+        <div class="container">
+  
+          <!-- MODULE TITLE -->
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h2 class="module-title">Meet the <b>bands.</b></h2>
+              <!-- <h3 class="module-subtitle">The bedding was hardly able to cover it and ready to slide off any moment.</h3> -->
+            </div>
+          </div>
+          <!-- /MODULE TITLE -->
+  
+          <div class="row multi-columns-row">
+  
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp">
+                <div class="iconbox-icon">
+                  <!-- <span class="icon_desktop"></span> -->
+                  <img src="{{ site.path }}/images/oakum.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">Oakum</h4>
+                </div>
+                <div class="iconbox-content">
+                  <p>A powerful rock trio with elements of blues, rock, funk and soul.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/oakumband" target="_blank" class="fa fa-facebook facebook"></a>
+                    <!-- <a href="https://twitter.com/crowningmusic" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="https://instagram.com/crowningmusic" target="_blank" class="fa fa-instagram instagram"></a> -->
+                  </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp" data-wow-delay="0.2s">
+                <div class="iconbox-icon">
+                  <img src="{{ site.path }}/images/thecrowning.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">The Crowning</h4>
+                </div>
+                <div class="iconbox-content">
+                  <p>Heavy hitting melodic alternative rock from Stroudsburg, PA.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://facebook.com/crowningmusic" target="_blank" class="fa fa-facebook facebook"></a>
+                    <a href="https://twitter.com/crowningmusic" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="https://instagram.com/crowningmusic" target="_blank" class="fa fa-instagram instagram"></a>
+                </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+  
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp" data-wow-delay="0.4s">
+                <div class="iconbox-icon">
+                    <img src="{{ site.path }}/images/headspell.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">Head Spell</h4>
+                </div>
+                <div class="iconbox-content">
+                  <p>A powerful rock trio with elements of blues, rock, funk and soul.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/headspell/" target="_blank" class="fa fa-facebook facebook"></a>
+                    <!-- <a href="#" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="#" target="_blank" class="fa fa-instagram instagram"></a>
+                    <a href="#" target="_blank" class="fa fa-behance behance"></a> -->
+                  </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp">
+                <div class="iconbox-icon">
+                    <img src="{{ site.path }}/images/rofoaudio.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">Rofo Audio</h4>
+                </div>
+                <div class="iconbox-content">
+                  <p>A power rock trio laced with riff-oriented guitar driven melodies.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pg/rofoaudiomusic" target="_blank" class="fa fa-facebook facebook"></a>
+                    <!-- <a href="#" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="#" target="_blank" class="fa fa-instagram instagram"></a>
+                    <a href="#" target="_blank" class="fa fa-behance behance"></a> -->
+                  </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+  
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp" data-wow-delay="0.2s">
+                <div class="iconbox-icon">
+                  <img src="{{ site.path }}/images/signsofmadness.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">Signs of Madness</h4>
+                </div>
+                <div class="iconbox-content">
+                    <p>Punishing guitar riffs and aggression of thrash with the melodic approach of classic metal.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pg/signsofmadness" target="_blank" class="fa fa-facebook facebook"></a>
+                    <!-- <a href="#" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="#" target="_blank" class="fa fa-instagram instagram"></a>
+                    <a href="#" target="_blank" class="fa fa-behance behance"></a> -->
+                  </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+
+            <!-- ICONBOX -->
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div class="iconbox text-sm-center wow fadeInUp" data-wow-delay="0.4s">
+                <div class="iconbox-icon">
+                    <img src="{{ site.path }}/images/falltorise.jpg" alt="">
+                </div>
+                <div class="iconbox-header">
+                  <h4 class="iconbox-title">Fall To Rise</h4>
+                </div>
+                <div class="iconbox-content">
+                    <p>Fall To Rise is an original rock/hard rock band out of Hackettstown New Jersey.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/pg/Falltorisenjband" target="_blank" class="fa fa-facebook facebook"></a>
+                    <!-- <a href="#" target="_blank" class="fa fa-twitter twitter"></a>
+                    <a href="#" target="_blank" class="fa fa-instagram instagram"></a>
+                    <a href="#" target="_blank" class="fa fa-behance behance"></a> -->
+                  </div>
+              </div>
+            </div>
+            <!-- /ICONBOX -->
+  
+          </div>
+  
+        </div>
+      </section>
+      <!-- /BANDS -->
+  
+    <!-- SUBSCRIBE -->
+		<section class="module overlay-dark" data-background="{{ site.path }}/images/faf-banner.jpg">
+			<div class="container">
+
+				<div class="row">
+
+					<!-- MODULE TITLE -->
+					<div class="col-sm-12 col-md-6 wow fadeInLeft">
+						<h2 class="module-title text-left text-md-center m-b-0 m-b-md-30">Subscribe for <b>Updates.</b></h2>
+					</div>
+					<!-- /MODULE TITLE -->
+
+					<div class="col-sm-12 col-md-6 text-sm-center wow fadeInRight">
+						<form id="subscription-form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-8 m-b-sm-30">
+									<label class="sr-only" for="sub-email">E-mail</label>
+									<input type="email" id="sub-email" name="sub-email" class="form-control no-boder" placeholder="E-mail">
+								</div>
+
+								<div class="col-sm-4">
+									<button type="submit" class="btn btn-base">Subscribe</button>
+								</div>
+							</div>
+						</form>
+
+						<div id="subscription-message" class="ajax-response"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+    <!-- /SUBSCRIBE -->
+    
+    <!-- CAMPING -->
+		<section id="camping" class="module">
+
+        <!-- MODULE DIVIDER -->
+        <a id="hero-divider" class="striped-icon divider inner-scroll" href="#camping">
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <!-- /MODULE DIVIDER -->
+  
+        <div class="container">
+  
+          <!-- MODULE TITLE -->
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h2 class="module-title">Camping <b>information.</b></h2>
+            </div>
+          </div>
+          <!-- /MODULE TITLE -->
+          
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <h4>Primitive Camping</h4>
+              <p>
+                We offer primitive camping onsite to anyone that would like to stay for the weekend. Camping is open from Friday June 1st to Sunday June 3rd. 
+                There are no water/sewer hookups or fires allowed aside from the main bonfire on the property.
+              </p>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <h4>Campgrounds</h4>
+                <p>
+                  For anyone that would like to camp in something other than a tent (RV, popup, camper, etc.) there are several campgrounds
+                  located right next to the property.<br />
+                  <a href="https://www.hickorylakecampground.com/" target="_blank">Hickory Lake Campground</a> | 
+                  <a href="https://campshadyacres.com/" target="_blank">Shady Acres Campground</a></li>
+                </p>
+              </div>
+          </div>
+  
+          </div>
+  
+        </div>
+      </section>
+      <!-- /CAMPING -->
+
+
+    <!-- GOOGLE MAP -->
+    <a name="location"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2 class="module-title">Location <b>Details.</b></h2>
+          <h3 class="module-subtitle">367 Laurel Hill Road, Bangor PA 18013.</h3>
+        </div>
+      </div>
+    </div>
+
+		<section class="module-map">
+			<div id="map" data-address="367 Laurel Hill Road Bangor, PA 18013, US" data-contact="<b>Five Acre Fest</b><br> 367 Laurel Hill Road<br>Bangor, PA 18013<br>P: (980) 428-1113"></div>
+		</section>
+    <!-- /GOOGLE MAP -->
+    
+      <!-- CONTACT -->
+		<section id="contact" class="module-sm">
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 class="module-title">Send us a <b>Message.</b></h2>
+              </div>
+            </div>
+          </div>
+
+        <!-- MODULE DIVIDER -->
+        <a class="striped-icon divider inner-scroll" href="#contact">
+          <i class="fa fa-envelope-o"></i>
+        </a>
+        <!-- /MODULE DIVIDER -->
+  
+        <div class="container">
+  
+          <div class="row">
+  
+            <div class="col-sm-8 col-sm-offset-2">
+  
+              <!-- CONTACT FORM -->
+              <form id="contact-form" novalidate accept-charset="UTF-8" action="https://formkeep.com/f/e9a1d6935b24" method="POST">
+  
+                <div class="row">
+  
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="sr-only" for="name">Name</label>
+                      <input type="text" id="name" class="form-control" name="name" placeholder="Name*" required="" data-validation-required-message="Please enter your name.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="sr-only" for="email">Your Email</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="E-mail*" required="" data-validation-required-message="Please enter your email address.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label class="sr-only" for="subject">Subject</label>
+                      <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject*" required="" data-validation-required-message="Please enter subject.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                  </div>
+  
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="message" rows="7" placeholder="Message*" required="" data-validation-required-message="Please enter your message."></textarea>
+                      <p class="help-block text-danger"></p>
+                    </div>
+  
+                    <div class="text-center wow tada" data-wow-delay="0.5s">
+                      <button type="submit" class="btn btn-base">Send Massage</button>
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </form>
+              <!-- /CONTACT FORM -->
+  
+              <!-- Ajax response -->
+              <div id="contact-response" class="ajax-response"></div>
+  
+            </div>
+  
+          </div><!-- .row -->
+  
+        </div>
+  
+      </section>
+      <!-- /CONTACT -->
+
+    	<!-- FOOTER -->
+
+		<footer class="footer p-t-0">
+        <div class="container">
+      
+          <div class="row">
+      
+            <div class="col-sm-2 col-sm-offset-5">
+              <div class="text-center m-b-40">
+                <img src="{{ site.path }}/images/faf-logo.jpg" alt="">
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="row">
+      
+            <div class="col-sm-12">
+      
+              <div class="social-icons social-icons-animated m-b-40">
+                <a href="https://facebook.com/fiveacrefest" target="_blank" class="fa fa-facebook facebook wow fadeInUp"></a>
+                <a href="https://twitter.com/fiveacrefest" target="_blank" class="fa fa-twitter twitter wow fadeInUp"></a>
+                <a href="https://instagram.com/fiveacrefest" target="_blank" class="fa fa-instagram instagram wow fadeInUp"></a>
+                <a href="mailto:info@fiveacrerecords.com" target="_blank" class="fa fa-envelope envelope wow fadeInUp"></a>
+              </div>
+      
+            </div>
+      
+          </div>
+      
+          <hr class="divider">
+      
+          <div class="row">
+      
+            <div class="col-sm-12">
+      
+              <div class="copyright text-center m-t-40">
+                © 2018 <a href="#"><b>Five Acre Records</b></a>, All Rights Reserved.
+              </div>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+      </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.1.13/jquery.mb.YTPlayer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+	
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyBho4_4nDtJrQBECn9E8q2oYBuMJZDHDoc"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gmap3/7.2.0/gmap3.min.js"></script> -->
+  <script src="{{ site.path }}/js/gmap3.min.js"></script>
+	
+	<script src="{{ site.path }}/js/typed.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqBootstrapValidation/1.3.7/jqBootstrapValidation.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js"></script>
+	<script src="{{ site.path }}/js/contact.js"></script>
+	<script src="{{ site.path }}/js/custom.js"></script>
 
 </body>
 </html>
