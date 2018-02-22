@@ -27,8 +27,8 @@ exclude:
   - vendor
   - Template
 
-plugins:
-  - jekyll-font-awesome-sass
+#plugins:
+#  - jekyll-font-awesome-sass
 
 # include:
 #   - vendor/bundle/gems/jekyll-font-awesome-sass-0.1.0
